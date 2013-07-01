@@ -1,5 +1,11 @@
 'use strict';
 
+// Disable all jQuery Mobile routing
+$.mobile.ajaxEnabled = false;
+$.mobile.linkBindingEnabled = false;
+$.mobile.hashListeningEnabled = false;
+$.mobile.pushStateEnabled = false;
+
 angular.module('jqmscaffoldskunkworks',['ngResource'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider

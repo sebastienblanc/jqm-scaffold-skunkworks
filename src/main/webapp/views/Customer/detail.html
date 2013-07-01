@@ -25,9 +25,11 @@
     </div>
     <div class="control-group">
         <div class="controls">
-            <button id="saveCustomer" name="saveCustomer" class="btn btn-primary" ng-disabled="isClean() || CustomerForm.$invalid" ng-click="save()"><i class="icon-ok-sign icon-white"></i> Save</button>
-            <button id="cancel" name="cancel" class="btn" ng-click="cancel()"><i class="icon-remove-sign"></i> Cancel</button>
-            <button id="deleteCustomer" name="deleteCustomer" class="btn btn-danger" ng-show="customer.id" ng-click="remove()"><i class="icon-trash icon-white"></i> Delete</button>
+            <button id="saveCustomer" name="saveCustomer" data-icon="check" data-inline="true" ng-click="save()" ng-disabled="isClean() || CustomerForm.$invalid">Save</button>
+            <button id="cancel" name="cancel" data-icon="back" data-inline="true" ng-click="cancel()">Cancel</button>
+            <span ng-show="customer.id">
+                <button id="deleteCustomer" name="deleteCustomer" data-icon="delete" data-inline="true" ng-click="remove()">Delete</button>
+            </span>
         </div>
     <div>
 </form>
