@@ -1,0 +1,15 @@
+new-project --named jqm-scaffold-skunkworks;
+persistence setup --provider HIBERNATE --container JBOSS_AS7;
+rest setup --activatorType WEB_XML;
+validation setup --provider JAVA_EE; 
+entity --named Customer;
+field string --named firstName;
+constraint NotNull --onProperty firstName; 
+field string --named lastName;
+constraint NotNull --onProperty lastName; 
+field temporal --type DATE --named dateOfBirth;
+constraint NotNull --onProperty dateOfBirth;
+rest endpoint-from-entity --contentType application/json com.example.jqmscaffoldskunkworks.model.Customer.java;
+scaffold-x setup --scaffoldType angularjs;
+cd ~~;
+scaffold-x from src/main/java/com/example/jqmscaffoldskunkworks/model/Customer.java;

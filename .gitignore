@@ -1,0 +1,16 @@
+#Eclipse
+.classpath
+.project
+.settings
+
+#Maven
+target/
+
+#IntelliJ IDEA
+*.iml
+*.ipr
+*.iws
+.idea
+
+# JBoss Forge
+.forge_settings
